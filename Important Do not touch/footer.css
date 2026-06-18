@@ -1,0 +1,37 @@
+/* Footer Styles */
+footer {
+  background: var(--dark-gray);
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+  font-size: 14px;
+  border-top: 2px solid var(--primary-color);
+}
+
+footer p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 15px;
+    margin-top: 40px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}
