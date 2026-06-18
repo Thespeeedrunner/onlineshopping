@@ -1,0 +1,308 @@
+/* Responsive Design & Media Queries */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .checkout-layout {
+    gap: 20px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+  }
+}
+
+/* Tablets & Small Devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px 10px;
+  }
+
+  header {
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  .cart-btn {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+  }
+
+  .product-card {
+    padding: 10px;
+  }
+
+  .product-image {
+    height: 120px;
+    margin-bottom: 8px;
+  }
+
+  .product-card h3 {
+    font-size: 13px;
+    margin: 8px 0;
+  }
+
+  .product-description {
+    font-size: 11px;
+  }
+
+  .filter-buttons {
+    margin: 15px 0;
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .cart-sidebar {
+    width: 100%;
+    right: -100%;
+    height: 100%;
+  }
+
+  #cartItems {
+    max-height: 50vh;
+  }
+
+  .checkout-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .order-summary {
+    position: static;
+    height: auto;
+  }
+
+  .checkout-form {
+    padding: 15px;
+  }
+
+  .checkout-form input {
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 16px;
+  }
+
+  .card-details {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .place-order-btn,
+  .back-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  footer {
+    padding: 20px 15px;
+    margin-top: 40px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px 8px;
+    margin: 0 auto;
+  }
+
+  header {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  header h1 {
+    font-size: 16px;
+  }
+
+  .cart-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 8px;
+  }
+
+  .product-card {
+    padding: 8px;
+  }
+
+  .product-image {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+
+  .product-card h3 {
+    font-size: 12px;
+    margin: 6px 0;
+  }
+
+  .product-description {
+    font-size: 10px;
+    margin: 4px 0;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .add-btn {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .filter-buttons {
+    margin: 10px 0;
+    gap: 6px;
+  }
+
+  .filter-btn {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .cart-sidebar {
+    width: 100%;
+    right: -100%;
+    padding: 15px;
+  }
+
+  .cart-sidebar h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .close-btn {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  #cartItems {
+    margin: 10px 0;
+    max-height: 45vh;
+  }
+
+  .cart-item {
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 12px;
+  }
+
+  .cart-total {
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .checkout-btn {
+    padding: 10px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .checkout-form {
+    padding: 12px;
+  }
+
+  .checkout-form input {
+    padding: 8px;
+    margin: 6px 0;
+    font-size: 14px;
+  }
+
+  .checkout-form h3 {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .place-order-btn,
+  .back-btn {
+    padding: 10px;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .order-summary {
+    padding: 15px;
+  }
+
+  .order-summary h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .order-item {
+    padding: 6px 0;
+    font-size: 11px;
+  }
+
+  .order-summary p {
+    margin: 6px 0;
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  footer {
+    padding: 15px 10px;
+    margin-top: 30px;
+    font-size: 12px;
+  }
+
+  footer p {
+    margin: 6px 0;
+  }
+}
+
+/* Very Small Devices */
+@media (max-width: 360px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+    gap: 6px;
+  }
+
+  .product-image {
+    height: 90px;
+  }
+
+  header h1 {
+    font-size: 14px;
+  }
+
+  .cart-btn {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+}

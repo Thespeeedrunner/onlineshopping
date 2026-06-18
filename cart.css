@@ -1,0 +1,149 @@
+/* Cart Sidebar Styles */
+.cart-sidebar {
+  position: fixed;
+  right: -350px;
+  top: 0;
+  width: 350px;
+  height: 100vh;
+  background: #fff;
+  border-left: 3px solid var(--primary-color);
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-sidebar.active {
+  right: 0;
+}
+
+.cart-sidebar h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.close-btn {
+  background: #999;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 15px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.close-btn:hover {
+  background: #666;
+}
+
+#cartItems {
+  margin: 15px 0;
+  max-height: 350px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+#cartItems::-webkit-scrollbar {
+  width: 6px;
+}
+
+#cartItems::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+#cartItems::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
+}
+
+#cartItems::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+.cart-item {
+  background: #f9f9f9;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  font-size: 13px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.cart-item-controls {
+  display: flex;
+  gap: 5px;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.cart-item-controls button {
+  padding: 4px 8px;
+  background: var(--medium-gray);
+  border: 1px solid #999;
+  font-weight: bold;
+  flex: 1;
+  border-radius: 4px;
+}
+
+.cart-item-controls button:hover {
+  background: #bbb;
+}
+
+.cart-item-controls input {
+  width: 40px;
+  padding: 4px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  text-align: center;
+  background: white;
+}
+
+.remove-btn {
+  background: var(--danger-color) !important;
+  color: #fff !important;
+  padding: 4px 8px !important;
+  font-size: 11px !important;
+  flex: 1;
+}
+
+.remove-btn:hover {
+  background: #da190b !important;
+}
+
+.cart-total {
+  border-top: 2px solid var(--border-color);
+  padding-top: 15px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.cart-total p {
+  margin: 8px 0;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-btn {
+  width: 100%;
+  background: #2196f3;
+  color: #fff;
+  margin-top: 15px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+}
+
+.checkout-btn:hover {
+  background: #0b7dda;
+}
+
+@media (max-width: 768px) {
+  .cart-sidebar {
+    width: 100%;
+    right: -100%;
+  }
+}

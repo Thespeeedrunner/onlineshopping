@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account - Simple Shop</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <style>
+      .account-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .account-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .sidebar {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .sidebar h3 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .sidebar li {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .sidebar li a {
+        color: #555;
+        text-decoration: none;
+        transition: color 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .sidebar li a:hover {
+        color: var(--primary-color);
+      }
+
+      .content-section {
+        background: white;
+      }
+
+      .content-section h2 {
+        color: var(--primary-color);
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: var(--text-color);
+      }
+
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        font-size: 14px;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+      }
+
+      .profile-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      .order-item {
+        padding: 15px;
+        background: #f9f9f9;
+        border-left: 4px solid var(--primary-color);
+        border-radius: 4px;
+        margin-bottom: 15px;
+      }
+
+      .order-item .order-number {
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      .order-item .order-status {
+        font-size: 13px;
+        color: #666;
+        margin-top: 5px;
+      }
+
+      .save-btn {
+        padding: 12px 24px;
+        background: var(--success-color);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .save-btn:hover {
+        background: #45a049;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        background: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: all 0.3s;
+      }
+
+      .back-link:hover {
+        background: var(--secondary-color);
+      }
+
+      @media (max-width: 768px) {
+        .account-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .profile-info {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>🛍️ Simple Shop</h1>
+      <nav>
+        <a href="Index.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="Index.html" class="cart-btn">← Back to Shop</a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+      <a href="Index.html" class="back-link">← Back to Shop</a>
+
+      <div class="account-container">
+        <h2 style="color: var(--primary-color)">My Account</h2>
+
+        <div class="account-grid">
+          <!-- Sidebar Menu -->
+          <div class="sidebar">
+            <h3>Account Menu</h3>
+            <ul>
+              <li><a href="#profile">👤 Profile</a></li>
+              <li><a href="#orders">📦 Orders</a></li>
+              <li><a href="#addresses">📍 Addresses</a></li>
+              <li><a href="#settings">⚙️ Settings</a></li>
+              <li><a href="#notifications">🔔 Notifications</a></li>
+            </ul>
+          </div>
+
+          <!-- Content Section -->
+          <div class="content-section">
+            <!-- Profile Section -->
+            <div id="profile" style="margin-bottom: 40px">
+              <h2>Profile Information</h2>
+              <div class="profile-info">
+                <div class="form-group">
+                  <label>First Name</label>
+                  <input type="text" value="John" placeholder="First Name" />
+                </div>
+                <div class="form-group">
+                  <label>Last Name</label>
+                  <input type="text" value="Doe" placeholder="Last Name" />
+                </div>
+                <div class="form-group">
+                  <label>Email Address</label>
+                  <input
+                    type="email"
+                    value="john.doe@email.com"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input
+                    type="tel"
+                    value="+1-800-123-4567"
+                    placeholder="Phone"
+                  />
+                </div>
+              </div>
+              <button
+                class="save-btn"
+                onclick="alert('Profile updated successfully!')"
+              >
+                Save Changes
+              </button>
+            </div>
+
+            <hr style="margin: 40px 0" />
+
+            <!-- Orders Section -->
+            <div id="orders" style="margin-bottom: 40px">
+              <h2>Recent Orders</h2>
+              <div class="order-item">
+                <div class="order-number">Order #001234</div>
+                <p>Wireless Headphones, USB-C Cable</p>
+                <div class="order-status">✓ Delivered on June 15, 2024</div>
+              </div>
+              <div class="order-item">
+                <div class="order-number">Order #001233</div>
+                <p>T-Shirt, Jeans</p>
+                <div class="order-status">
+                  📦 Shipped - Arriving June 18, 2024
+                </div>
+              </div>
+              <div class="order-item">
+                <div class="order-number">Order #001232</div>
+                <p>Desk Lamp, Plant Pot</p>
+                <div class="order-status">✓ Delivered on June 10, 2024</div>
+              </div>
+            </div>
+
+            <hr style="margin: 40px 0" />
+
+            <!-- Addresses Section -->
+            <div id="addresses" style="margin-bottom: 40px">
+              <h2>Saved Addresses</h2>
+              <div class="form-group">
+                <label>Street Address</label>
+                <input
+                  type="text"
+                  value="123 Main Street"
+                  placeholder="Street Address"
+                />
+              </div>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 2fr 1fr 1fr;
+                  gap: 15px;
+                "
+              >
+                <div class="form-group">
+                  <label>City</label>
+                  <input type="text" value="New York" placeholder="City" />
+                </div>
+                <div class="form-group">
+                  <label>State/Province</label>
+                  <input type="text" value="NY" placeholder="State" />
+                </div>
+                <div class="form-group">
+                  <label>ZIP Code</label>
+                  <input type="text" value="10001" placeholder="ZIP" />
+                </div>
+              </div>
+              <button
+                class="save-btn"
+                onclick="alert('Address updated successfully!')"
+              >
+                Update Address
+              </button>
+            </div>
+
+            <hr style="margin: 40px 0" />
+
+            <!-- Settings Section -->
+            <div id="settings">
+              <h2>Account Settings</h2>
+              <div class="form-group">
+                <label>Currency</label>
+                <select>
+                  <option>USD ($)</option>
+                  <option>EUR (€)</option>
+                  <option>GBP (£)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Language</label>
+                <select>
+                  <option>English</option>
+                  <option>Spanish</option>
+                  <option>French</option>
+                  <option>German</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label style="display: flex; align-items: center">
+                  <input
+                    type="checkbox"
+                    checked
+                    style="width: auto; margin-right: 8px"
+                  />
+                  Subscribe to marketing emails
+                </label>
+              </div>
+              <button
+                class="save-btn"
+                onclick="alert('Settings saved successfully!')"
+              >
+                Save Settings
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Store | You copy me i'll sue you</p>
+      <p>
+        <a href="about.html">About</a> | <a href="contact.html">Contact</a> |
+        <a href="Index.html">Shop</a>
+      </p>
+    </footer>
+  </body>
+</html>

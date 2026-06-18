@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Shop</title>
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="common.css">
+	<link rel="stylesheet" href="header.css">
+	<link rel="stylesheet" href="products.css">
+	<link rel="stylesheet" href="cart.css">
+	<link rel="stylesheet" href="checkout.css">
+	<link rel="stylesheet" href="footer.css">
+	<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+	<!-- Header -->
+	<header>
+		<h1>🛍️ my store</h1>
+		<nav>
+			<a href="Index.html" style="background: rgba(255, 255, 255, 0.2);">Shop</a>
+			<a href="about.html">About</a>
+			<a href="contact.html">Contact</a>
+			<a href="account.html">Account</a>
+		</nav>
+		<button class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+	</header>
+
+	<!-- Cart Sidebar -->
+	<div id="cartSidebar" class="cart-sidebar">
+		<h2>Shopping Cart</h2>
+		<button onclick="toggleCart()" class="close-btn">Close</button>
+		<div id="cartItems"></div>
+		<div class="cart-total">
+			<p>Subtotal: $<span id="subtotal">0.00</span></p>
+			<p>Tax (10%): $<span id="tax">0.00</span></p>
+			<p><strong>Total: $<span id="total">0.00</span></strong></p>
+			<button onclick="goToCheckout()" class="checkout-btn">Checkout</button>
+		</div>
+	</div>
+
+	<!-- Main Content -->
+	<main class="container">
+		<!-- Shop Page -->
+		<div id="shopPage" class="page active">
+			<h2>Products</h2>
+			<div class="filter-buttons">
+				<button onclick="filterByCategory('all')" class="filter-btn active">All</button>
+				<button onclick="filterByCategory('electronics')" class="filter-btn">Electronics</button>
+				<button onclick="filterByCategory('clothing')" class="filter-btn">Clothing</button>
+				<button onclick="filterByCategory('home')" class="filter-btn">Home</button>
+				<button onclick="filterByCategory('sports')" class="filter-btn">Sports</button>
+			</div>
+			<div id="productsGrid" class="products-grid"></div>
+		</div>
+
+		<!-- Checkout Page -->
+		<div id="checkoutPage" class="page">
+			<h2>Checkout</h2>
+			<div class="checkout-layout">
+				<div class="checkout-form">
+					<h3>Billing Information</h3>
+					<input type="text" id="fullName" placeholder="Full Name" required>
+					<input type="email" id="email" placeholder="Email" required>
+					<input type="text" id="address" placeholder="Address" required>
+					<input type="text" id="city" placeholder="City" required>
+					<input type="text" id="zip" placeholder="ZIP Code" required>
+					<input type="text" id="country" placeholder="Country" required>
+					
+					<h3>Payment Information</h3>
+					<input type="text" id="cardNumber" placeholder="Card Number" maxlength="19" required>
+					<div class="card-details">
+						<input type="text" placeholder="MM/YY" maxlength="5" required>
+						<input type="text" placeholder="CVV" maxlength="3" required>
+					</div>
+					
+					<button class="place-order-btn" onclick="placeOrder()">Place Order</button>
+					<button class="back-btn" onclick="backToShop()">Back to Shop</button>
+				</div>
+				<div class="order-summary">
+					<h3>Order Summary</h3>
+					<div id="orderItems"></div>
+					<hr>
+					<p>Subtotal: $<span id="summarySubtotal">0.00</span></p>
+					<p>Tax (10%): $<span id="summaryTax">0.00</span></p>
+					<p>Shipping: $10.00</p>
+					<p><strong>Total: $<span id="summaryTotal">0.00</span></strong></p>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<p>&copy; 2026 Store | You copy me i'll sue you</p>
+	</footer>
+
+	<script src="products.js"></script>
+	<script src="utils.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
+              <strong>Total: $<span id="summaryTotal">0.00</span></strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Store | You copy me i'll sue you</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
